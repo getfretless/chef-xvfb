@@ -10,7 +10,7 @@
 <% end %>
 
 XVFB=/usr/bin/Xvfb
-XVFBARGS=":<%= @node[:xvfb][:display] %> -nolisten tcp -fbdir /var/run"
+XVFBARGS=":<%= @node[:xvfb][:display] %> -screen 0 <%= @node[:xvfb][:WxHxD] %> -nolisten tcp -fbdir /var/run"
 PIDFILE=/var/run/xvfb.pid
 case "$1" in
   start)
